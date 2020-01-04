@@ -3,7 +3,7 @@ import { UserManager } from 'oidc-client'
 class ApplicationUserManager extends UserManager {
   constructor () {
     super({
-      authority: 'http://ids.neters.club',
+      authority: 'https://ids.neters.club',
       client_id: 'blogadminjs',
       redirect_uri: 'http://vueadmin.neters.club/callback',
       response_type: 'id_token token',
