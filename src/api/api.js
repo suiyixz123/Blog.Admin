@@ -94,6 +94,14 @@ axios.interceptors.response.use(
                 });
                 return null;
             }
+            // 429 ip限流
+            if (error.response.status == 429) {
+                Vue.prototype.$message({
+                    message: '刷新次数过多，请稍事休息重试！',
+                    type: 'error'
+                });
+                return null;
+            }
         }
         return ""; // 返回接口返回的错误信息
     }
