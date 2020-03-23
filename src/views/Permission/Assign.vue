@@ -365,12 +365,18 @@
     .box-card {
         width: 90%;
     }
-
-    .el-checkbox+.el-checkbox{
-        margin-left: 5px !important;
-    }
-
     .el-checkbox{
         margin-right: 5px !important;
+    }
+        .el-checkbox{
+        margin-right: 5px !important;
+        float: left;
+    }
+    .el-checkbox-group{
+        margin-left: 50px;
+        padding: 5px;
+    }
+    .el-tree-node__content{
+        height: auto !important;
     }
 </style>
