@@ -14,7 +14,7 @@
             </el-card>
 
         </el-col>
-        <el-col :span="16" class="toolbar perms">
+        <el-col :span="16" class="toolbar perms morechildren">
             <el-card class="box-card">
                 <div slot="header" class="clearfix">
                     <span>菜单</span>
@@ -365,18 +365,16 @@
     .box-card {
         width: 90%;
     }
-    .el-checkbox{
-        margin-right: 5px !important;
-    }
-        .el-checkbox{
+    
+   .morechildren .el-checkbox    {
         margin-right: 5px !important;
         float: left;
     }
-    .el-checkbox-group{
+   .morechildren .el-checkbox-group{
         margin-left: 50px;
         padding: 5px;
     }
-    .el-tree-node__content{
+   .morechildren .el-tree-node__content{
         height: auto !important;
     }
 </style>
