@@ -178,9 +178,8 @@
 
                 //NProgress.start();
                 getBlogListPage(para).then((res) => {
-
-                    this.total = res.response.dataCount;
-                    this.users = res.response.data;
+                    this.total = res.data.response.dataCount;
+                    this.users = res.data.response.data;
                     this.listLoading = false;
                     //NProgress.done();
                 });

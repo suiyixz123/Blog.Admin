@@ -79,7 +79,7 @@ export default {
     //初始化
     var para = { id: this.id };
     getBlogDeatil(para).then(res => {
-      this.infoForm = res.response;
+      this.infoForm = res.data.response;
     });
   },
   methods: {
@@ -93,7 +93,7 @@ export default {
           var postPara = this.infoForm;
 
           editBlog(postPara).then(res => {
-            if (res.response.success) {
+            if (res.data.response.success) {
               this.$notify({
                 type: "success",
                 message: "修改成功!",
@@ -101,7 +101,7 @@ export default {
               });
               this.$router.replace(`/Blog/Blogs`);
             } else {
-              var errorMsg = res.response.msg;
+              var errorMsg = res.data.response.msg;
               this.$message({
                 type: "error",
                 message: errorMsg,
